@@ -1,0 +1,50 @@
+@import '../styles/variables.scss';
+
+.Factoring {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.level {
+    position: relative;
+}
+
+.lines {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.values {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.factored {
+    width: 50%;
+    display: flex;
+}
+
+.factored_left {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: $factor-line-width;
+}
+
+.factored_right {
+    padding-left: $factor-line-width;
+}
+
+.prime {
+    line-height: 22px;
+    color: $white;
+    background-color: $dark;
+    border-radius: 50px;
+    padding: 4px 10px;
+}

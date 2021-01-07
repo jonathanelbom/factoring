@@ -1,0 +1,15 @@
+@import '../styles/variables.scss';
+
+.DropZone {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 50px;
+    // background-color: #efefef;
+    position: relative;
+
+    &_over {
+        background-color: #dedede;
+    }
+}
