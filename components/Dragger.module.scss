@@ -2,6 +2,20 @@
     font-size: 20px;
     line-height: 20px;
     font-weight: 500;;
-    padding: 8px;
+    padding: 8px 12px;
     cursor: pointer;
+    border-radius: 50px;
+    background-color: #efefef;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    transition: transform 200ms ease;
+    position: relative;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover {
+        transform: scale(1.2);
+    }
 }

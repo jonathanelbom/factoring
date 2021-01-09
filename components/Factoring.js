@@ -1,27 +1,32 @@
-import React, {useReducer, useRef, useEffect, Fragment} from 'react';
+import React, {useReducer} from 'react';
 import classnames from 'classnames';
 
 import DropZone from '../components/DropZone';
-import {primes, getFactors, makeId} from '../pages/index';
+import {makeId} from '../pages/index';
 
 import styles from './Factoring.module.scss'
 
 const computeOffset = ({elem, index}) => index < 1 ? 0 : elem.current.clientWidth / 2 + 30; // line width is 30px
 const computeTotalOffsetStyle = ({levels, index}) => levels.slice(0, index + 1).reduce((acc, cur) => acc + (cur.offset || 0), 0);
-const initState = (state) => {
-    const factors = getFactors(primes);
-    return {
+// const initState = ({factors}) => {
+//     // const factors = makeFactors(primes);
+//     return {
+//         factors,
+//         factored: [],
+//         remaining: [...factors],
+//         levels: [],
+//     };
+// }
+
+export default function Factoring({factors}) {
+    const [state, setState] = useReducer((oldState, newState) => ({
+        ...oldState, ...newState
+    }), {
         factors,
         factored: [],
         remaining: [...factors],
         levels: [],
-    };
-}
-
-export default function Factoring() {
-    const [state, setState] = useReducer((oldState, newState) => ({
-        ...oldState, ...newState
-    }), {}, initState);
+    });
     const rejectDrop = ({prime, factors, id}) => {};
     const acceptDrop = ({prime, factors, elem, id, index}) => {
         const offset = computeOffset({elem, index: index + 1});

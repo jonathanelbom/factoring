@@ -18,6 +18,8 @@ body {
 * {
   -webkit-tap-highlight-color: transparent !important;
   box-sizing: border-box;
+  user-select: none;
+  font-family: $font-family !important;
 }
 
 a {
@@ -25,7 +27,7 @@ a {
 }
 
 .title {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 300;
   margin-bottom: 8px;
 }
@@ -40,4 +42,36 @@ a {
   &--right {
     background: linear-gradient(to top right, #fff calc(50% - 1px), $black, $white calc(50% + 1px));
   }
+}
+
+.btn {
+	background-color: $blue;
+	border: none !important;
+	outline: none !important;
+	padding: 8px 12px;
+	font-size: 16px;
+	font-weight: 400;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: transform 200ms ease;
+
+	// &:focus {
+	// 	transform: scale(1.05);
+	// }
+	
+	&:hover {
+		transform: scale(1.05);
+	}
+
+	&:active {
+		transform: scale(.95);
+		transition-duration: 0ms;	
+	}
+
+	&[disabled] {
+		opacity: 0.5;
+		transition: none !important;
+		transform: none !important;
+		cursor: not-allowed;
+	}
 }
