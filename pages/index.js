@@ -90,6 +90,9 @@ export default function App() {
 				numPrimes: numInputPrimes,
 				input: ''
 			});
+			requestAnimationFrame(() =>{
+				updatePadding();
+			});
 		}
 	}
 	const showHelp = () => {
