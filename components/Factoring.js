@@ -49,7 +49,7 @@ export default function Factoring({factors}) {
             <DropZone
                 factors={state.factors}
                 acceptDrop={acceptDrop}
-                rejectDrop={acceptDrop}
+                rejectDrop={rejectDrop}
                 active={state.levels.length < 1}
                 index={-1}
             />
@@ -81,7 +81,7 @@ export default function Factoring({factors}) {
                                         active={index === levels.length - 1}
                                         factors={factors}
                                         acceptDrop={acceptDrop}
-                                        rejectDrop={acceptDrop}
+                                        rejectDrop={rejectDrop}
                                         id={id}
                                     />
                                 )}
