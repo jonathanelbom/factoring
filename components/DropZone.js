@@ -1,7 +1,7 @@
 import {useReducer, useRef} from 'react';
 import classnames from 'classnames';
 
-import {computeValue, filterOutFirst} from '../pages/index';
+import {computeValue, filterOutFirst} from './utils';
 
 import styles from './DropZone.module.scss'
 

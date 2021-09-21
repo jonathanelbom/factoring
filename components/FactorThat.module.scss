@@ -1,0 +1,143 @@
+@import '../styles/variables.scss';
+
+.App {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    display: flex; 
+    flex-wrap: wrap;
+    overflow: auto;
+    padding: 32px 16px;
+    //  padding-top: 104px;
+}
+
+.header {
+    background-color: #f2f3f5;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #f2f3f5;
+    // box-shadow: 0 2px 16px rgba(0, 0, 0, .2);
+    z-index: 1;
+}
+
+.header_primary {
+    width: 100%;
+    background-color: $dark-darkest;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+}
+
+.logo {
+    display: flex;
+    align-items: flex-start;
+    color: $white;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 500;
+
+    > :last-child {
+        color: $blue;
+        font-weight: 700;
+    }
+}
+
+.primary_controls{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 8px 16px 0px 16px;
+    flex-wrap: wrap;
+}
+
+.random_btn {
+    margin-left: 30px;
+    margin-bottom: 8px;
+}
+
+.number_input {
+    margin-right: 8px;
+    padding: 6px 8px;
+    font-size: 16px;
+
+    &:focus {
+        outline: $blue solid 4px;
+        outline-offset: -4px;
+    }
+}
+
+.help_btn {
+    height: 36px;
+    width: 36px;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 22px;
+    border-radius: 50px;
+    // margin-left: 20px;
+    // margin-bottom: 8px;
+    padding: 6px 12px;
+    background-color: #efefef;
+}
+
+.header_secondary {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 12px;
+}
+
+// .draggers_more_less {
+//     display: flex;
+//     align-content: center;
+//     align-self: flex-start;
+//     // flex-wrap: wrap;
+//     flex-grow: 0;
+//     flex-shrink: 1;
+//     justify-content: flex-end;
+//     padding: 8px 8px 0 0;
+
+//     > * {
+//         margin-right: 8px;
+//         margin-bottom: 8px;
+//     }
+// }
+
+.draggers_title {
+    font-size: 20px;
+    line-height: 36px;
+    font-weight: 600;
+    color: $dark;
+    padding: 0 16px 0 0;
+    // background-color: #efefef;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.draggers {
+    display: flex; 
+    flex-wrap: wrap;
+    flex-grow: 1;
+    padding: 8px 8px 0 8px;
+}
+
+.instructions {
+    max-width: 600px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+
+    p {
+        margin: 0;
+    }
+
+    li {
+        margin: 4px 0;
+    }
+}

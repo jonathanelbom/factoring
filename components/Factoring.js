@@ -1,8 +1,8 @@
 import React, {useReducer} from 'react';
 import classnames from 'classnames';
 
-import DropZone from '../components/DropZone';
-import {makeId} from '../pages/index';
+import DropZone from './DropZone';
+import {makeId} from './utils';
 
 import styles from './Factoring.module.scss'
 
@@ -17,6 +17,10 @@ const computeTotalOffsetStyle = ({levels, index}) => levels.slice(0, index + 1).
 //         levels: [],
 //     };
 // }
+
+const reducer = (action, state) => {
+
+}
 
 export default function Factoring({factors}) {
     const [state, setState] = useReducer((oldState, newState) => ({
@@ -73,7 +77,7 @@ export default function Factoring({factors}) {
                             </div>
                             <div className={classnames(styles.factored, styles.factored_right)}>
                                 {factors.length <= 1 && (
-                                    <div className={styles.prime}>{factors[0]}</div>
+                                    <div className={styles.prime}>{factors[0] || 1}</div>
                                 )}
                                 {factors.length > 1 && (
                                     <DropZone
